@@ -1,0 +1,10 @@
+{
+  "homePage": {
+    "logo": "css=.logo",
+    "homeLink": "text=Home",
+    "menLink": "text=Men"
+  },
+  "productPage": {
+    "addToCartButton": "text=Add to cart"
+  }
+}

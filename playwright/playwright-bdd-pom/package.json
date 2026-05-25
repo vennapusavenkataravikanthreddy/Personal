@@ -1,0 +1,43 @@
+{
+  "name": "playwright-bdd-pom",
+  "version": "1.0.0",
+  "description": "A Playwright project implementing Page Object Model and BDD-Cucumber framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headless": "playwright test --headed=false",
+    "report": "allure generate reports/allure-results --clean -o reports/html && allure open reports/html"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.20.0",
+    "cucumber": "^7.0.0",
+    "xlsx": "^0.17.0",
+    "allure-commandline": "^2.13.8"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0",
+    "@types/node": "^16.0.0",
+    "@types/jest": "^27.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "browsers": [
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
+  "playwright": {
+    "reporter": [
+      ["html", { "outputFolder": "reports/html" }],
+      ["allure-playwright"],
+      ["trace", { "outputFolder": "reports/trace" }]
+    ],
+    "timeout": 30000,
+    "use": {
+      "headless": true,
+      "trace": "on-first-retry"
+    }
+  }
+}

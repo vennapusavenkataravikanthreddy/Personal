@@ -1,0 +1,19 @@
+{
+  "testCases": [
+    {
+      "testCaseId": "TC001",
+      "status": "passed",
+      "reportPath": "reports/html/TC001.html"
+    },
+    {
+      "testCaseId": "TC002",
+      "status": "failed",
+      "reportPath": "reports/html/TC002.html"
+    },
+    {
+      "testCaseId": "TC003",
+      "status": "skipped",
+      "reportPath": "reports/html/TC003.html"
+    }
+  ]
+}
