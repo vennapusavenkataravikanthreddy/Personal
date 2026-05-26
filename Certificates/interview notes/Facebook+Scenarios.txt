@@ -1,0 +1,29 @@
+NEW ENHANCEMENT Scenarios:
+1: Valid login, using a correct phone# and password (HAPPY PATH).
+2: Valid phone#, but incorrect password error message (NEGATIVE).
+3: Verify error message for login with non-existing phone#.
+4: Verify valid login using phone# and password on the Mobile site & Mobile app.
+5: Login with any user, update the phone#. Logout and login with the updated phone#.
+6: Remove phone# from user account and try login. It should show error message.
+7: Login with phone# of a deactivated account, and verify error message.
+8: Can I have 1+ phone#? - Assume that user can only login with "Primary" phone# of account. Verify that login, and verify error message with secondary phone#.
+
+9: International format (+1, +91) acceptable?
+Assume that user can login with +1, +91 appended, verify this functionality.
+
+10: Verify min/max length. If user is entering phone# it should accept maximum 10 digits. 
+If user is entering alpha-numeric characters for email, there should be no character limit.
+
+11: Login with valid phone# and logout, it should not persist in the "email or password" box.
+12: Login using enter key - user can enter phone#, password and hit Enter key to login.
+13: Brute force check - Verify user should start getting Captcha option after X number of incorrect login attempts.
+
+14: Keep both email/phone# and password field blank and click on Log In - Verify error message mentions phone# also (The email address or mobile number you entered isn't connected to an account. Find your account and log in.)
+
+
+
+REGRESSION Scenarios:
+1: Verify login with valid Email address and password.
+2: Verify existing links - Forgotten Password, Create An Account.
+3: If user is already logged in to website, do not show the login page.
+4: Verify user can navigate through email/phone and password boxes using "Tab" key.
